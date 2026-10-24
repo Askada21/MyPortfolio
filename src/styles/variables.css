@@ -1,0 +1,15 @@
+:root {
+  --bg: #10120f;
+  --bg-secondary: #191c17;
+  --text: #e4dfd3;
+  --muted: #a8ad9f;
+  --moss: #788568;
+  --olive: #414a38;
+  --border: #383e35;
+  --silver: #b9bcb5;
+  --serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --mono: 'DM Mono', 'Courier New', monospace;
+  --content: 1240px;
+  --gutter: clamp(22px, 4.4vw, 76px);
+  color-scheme: dark;
+}
