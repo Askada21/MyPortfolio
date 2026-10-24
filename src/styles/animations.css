@@ -2,3 +2,12 @@
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
+.flytrap { --plant-x: 0deg; --plant-y: 0deg; position: absolute; width: 100%; height: calc(100% + 65px); bottom: -31px; border: 0; background: none; padding: 0; cursor: pointer; transform: perspective(900px) rotateY(var(--plant-x)) rotateX(var(--plant-y)); transition: transform .65s ease-out; transform-origin: 50% 90%; }
+.flytrap svg { width: 100%; height: 100%; overflow: visible; }
+.plant-sway { transform-origin: 55% 100%; animation: sway 12s ease-in-out infinite; }
+.trap-lobe { transform-origin: 0 10px; animation: breathe 9s ease-in-out infinite; transition: transform .6s ease-in-out; }
+.is-closed .trap-lobe { animation: none; transform: scaleX(.12); }
+.plant-instruction { position: absolute; left: 18%; bottom: 16px; font-size: 8px; color: var(--muted); letter-spacing: .1em; }
+@keyframes sway { 0%, 100% { transform: rotate(-1deg); } 50% { transform: rotate(1.5deg); } }
+@keyframes breathe { 0%, 100% { transform: scaleX(1); } 50% { transform: scaleX(.87); } }
+@media (prefers-reduced-motion: reduce) { .plant-sway, .trap-lobe { animation: none; } .flytrap { transform: none; } .is-closed .trap-lobe { transform: scaleX(.12); } }
