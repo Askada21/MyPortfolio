@@ -2,12 +2,58 @@ import { Arrow, Star } from './Ornaments'
 import VenusFlytrap from './VenusFlytrap'
 
 export default function Hero() {
-  return <section id="home" className="hero section"><div className="hero-copy">
-    <div className="eyebrow"><span>[ 01 ]</span><span><span className="location-dot" /> DUBLIN, IRELAND</span></div>
-    <h1>Hi, I’m <em>Daria</em><span className="heading-period">.</span><Star /></h1>
-    <p className="hero-subtitle">SOFTWARE ENGINEER &amp;<br className="mobile-break" /> DATA SCIENCE STUDENT</p>
-    <p className="hero-description">I build software, work with data, and turn ideas into practical solutions.</p>
-    <div className="hero-actions"><a className="button" href="#projects">View Projects <Arrow /></a><a className="text-link" href="https://github.com/Askada21" target="_blank" rel="noopener noreferrer">GitHub <Arrow /></a></div>
-    <a href="#about" className="scroll-link">SCROLL<br />TO EXPLORE <span aria-hidden="true" /></a>
-  </div><div className="hero-art"><VenusFlytrap /><span className="plant-caption">Dionaea muscipula<br /><span>Venus flytrap / fig. 01</span></span><span className="vertical-note" aria-hidden="true">CODE · DATA · IDEAS · GROW</span><Star className="art-star" /></div></section>
+  return (
+    <section id="home" className="hero section">
+      <div className="hero-copy">
+        <div className="eyebrow">
+          <span>[ 01 ]</span>
+          <span>
+            <span className="location-dot" /> DUBLIN, IRELAND
+          </span>
+        </div>
+        <h1>
+          Hi, I’m <em>Daria</em>
+          <span className="heading-period">.</span>
+          <Star />
+        </h1>
+        <p className="hero-subtitle">
+          SOFTWARE ENGINEER &amp;
+          <br className="mobile-break" /> DATA SCIENCE STUDENT
+        </p>
+        <p className="hero-description">
+          I build software, work with data, and turn ideas into practical solutions.
+        </p>
+        <div className="hero-actions">
+          <a className="button" href="#projects">
+            View Projects <Arrow />
+          </a>
+          <a
+            className="text-link"
+            href="https://github.com/Askada21"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub <Arrow />
+          </a>
+        </div>
+        <a href="#about" className="scroll-link">
+          SCROLL
+          <br />
+          TO EXPLORE <span aria-hidden="true" />
+        </a>
+      </div>
+      <div className="hero-art">
+        <VenusFlytrap />
+        <span className="plant-caption">
+          Dionaea muscipula
+          <br />
+          <span>Venus flytrap / fig. 01</span>
+        </span>
+        <span className="vertical-note" aria-hidden="true">
+          CODE · DATA · IDEAS · GROW
+        </span>
+        <Star className="art-star" />
+      </div>
+    </section>
+  )
 }
