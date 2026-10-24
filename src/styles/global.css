@@ -182,3 +182,25 @@ a:hover .arrow, button:hover .arrow { transform: translate(3px, -3px); }
 .credential-image { display: block; width: 100%; height: auto; margin-top: 20px; }
 @media (max-width: 1000px) { .achievement-layout { grid-template-columns: 1.7fr 1fr; gap: 30px; } .achievement { padding: 25px 20px; gap: 20px; } .achievement-year { top: 25px; right: 20px; } }
 @media (max-width: 760px) { .achievement-layout { grid-template-columns: 1fr; gap: 15px; } .achievement { gap: 16px; padding: 23px 18px; } .achievement h3 { font-size: 32px; } .achievement-emblem { width: 38px; height: 38px; } .achievement-emblem .star { width: 23px; } .achievement-organization { font-size: 8px; } .achievement-year { font-size: 8px; top: 23px; right: 15px; } .achievement-note { height: 100px; padding-left: 10px; } .achievement-note .branch { height: 140px; bottom: -25px; } .achievement-note p { font-size: 24px; } }
+.contact { min-height: 415px; overflow: hidden; padding-bottom: 70px; }
+.contact-copy { position: relative; z-index: 2; width: 57%; padding-top: 10px; }
+.contact-copy h3 { font-size: clamp(35px, 3.7vw, 49px); letter-spacing: -.025em; }
+.contact-break { display: none; }
+.contact-copy > p { font-size: 12px; max-width: 400px; margin-top: 22px; }
+.contact-links { display: flex; flex-wrap: wrap; align-items: center; gap: 23px; margin-top: 29px; }
+.contact-links .button { text-transform: none; font-size: 10px; min-width: 110px; padding: 11px 18px; }
+.contact-pending { display: flex; flex-direction: column; justify-content: center; border: 1px solid var(--border); padding: 8px 18px; font-size: 10px; min-width: 110px; line-height: 1.6; color: var(--muted); }
+.contact-pending > span { font-size: 7px; color: var(--muted); }
+.contact-art { position: absolute; right: -30px; bottom: -70px; width: 60%; pointer-events: none; }
+.contact-art .landscape { width: 100%; }
+.contact-art > .star { position: absolute; left: 15%; top: 52%; width: 14px; color: var(--silver); }
+.contact-art-label { position: absolute; right: 2%; top: 45%; color: var(--moss); font-size: 8px; letter-spacing: .08em; }
+.footer { padding: 23px var(--gutter); }
+.footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 25px; font-size: 8px; color: var(--muted); letter-spacing: .04em; }
+.footer-inner p { display: flex; align-items: center; gap: 25px; }
+.footer-inner p:nth-child(2) { gap: 12px; }
+.footer-flower { font-size: 16px; }
+.footer-inner a { padding-block: 8px; }
+@media (max-width: 1000px) { .contact-copy { width: 62%; } .contact-links { gap: 12px; } .contact-art { width: 56%; bottom: -55px; right: -35px; opacity: .8; } }
+@media (max-width: 760px) { .contact { padding-bottom: 30px; } .contact-copy { width: 100%; padding-top: 0; } .contact-copy h3 { font-size: clamp(35px, 6vw, 46px); max-width: 480px; } .contact-copy > p { max-width: 365px; font-size: 11px; } .contact-art { position: relative; width: 110%; right: auto; margin: -20px 0 -40px -6%; bottom: auto; opacity: .8; } .contact-art-label { right: 6%; } .footer-inner { flex-wrap: wrap; gap: 10px 20px; font-size: 7px; } .footer-inner p { gap: 15px; } .footer-inner p:first-child > span { display: none; } .footer-inner a { margin-left: auto; } }
+@media (max-width: 380px) { .contact-links { gap: 9px; } .contact-links .button, .contact-pending { min-width: 0; padding-inline: 11px; } .contact-copy h3 { font-size: 35px; } }
