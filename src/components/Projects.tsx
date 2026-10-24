@@ -142,7 +142,9 @@ export default function Projects() {
       <div className="section-content">
         <div className="section-heading">
           <SectionLabel number="04">Featured projects</SectionLabel>
-          <span className="section-aside">/ SELECTED WORK (04)</span>
+          <span className="section-aside">
+            / SELECTED WORK ({projects.length.toString().padStart(2, '0')})
+          </span>
         </div>
         <div className="project-layout">
           <div className="project-list" aria-label="Choose a project preview">

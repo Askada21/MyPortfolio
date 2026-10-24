@@ -17,7 +17,7 @@ export default function App() {
         Skip to content
       </a>
       <Header />
-      <main id="main-content">
+      <main id="main-content" tabIndex={-1}>
         <Hero />
         <About />
         <TechStack />
