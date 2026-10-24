@@ -12,7 +12,7 @@ function ProjectArtwork({ project }: { project: Project }) {
           alt={project.imageAlt || project.title}
           loading="lazy"
           width="1116"
-          height="728"
+          height="720"
         />
         <figcaption>LIVE PROJECT / SCREEN CAPTURE</figcaption>
       </figure>

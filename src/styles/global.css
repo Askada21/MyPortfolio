@@ -1679,3 +1679,9 @@ button:hover .arrow {
     padding-right: 26px;
   }
 }
+
+@media (max-width: 760px) {
+  .plant-caption {
+    display: none;
+  }
+}
