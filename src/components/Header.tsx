@@ -9,20 +9,20 @@ export default function Header() {
   const toggle = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
-    const sections = links
+    const sections = ['Home', ...links]
       .map((link) => document.getElementById(link.toLowerCase()))
       .filter((el): el is HTMLElement => !!el)
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) setActive(entry.target.id)
+          if (entry.isIntersecting) setActive(entry.target.id === 'home' ? '' : entry.target.id)
         })
       },
       { rootMargin: '-20% 0px -45% 0px' },
     )
     sections.forEach((section) => observer.observe(section))
     const closeOnEscape = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
+      if (event.key === 'Escape' && toggle.current?.getAttribute('aria-expanded') === 'true') {
         setOpen(false)
         toggle.current?.focus()
       }
