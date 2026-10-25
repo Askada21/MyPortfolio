@@ -353,9 +353,6 @@ button:hover .arrow {
 .branch {
   color: var(--muted);
 }
-.landscape {
-  color: var(--muted);
-}
 @media (min-width: 1500px) {
   .hero {
     padding-inline: max(var(--gutter), calc((100vw - var(--content)) / 2));
@@ -1244,12 +1241,6 @@ button:hover .arrow {
   position: relative;
   align-self: center;
 }
-.experience-landscape .landscape {
-  width: 120%;
-  max-width: none;
-  margin-left: -15%;
-  opacity: 0.7;
-}
 .landscape-label {
   position: absolute;
   top: 0;
@@ -1298,58 +1289,68 @@ button:hover .arrow {
     margin: 12px auto 0;
     width: 100%;
   }
-  .experience-landscape .landscape {
-    width: 100%;
-    margin: 0;
-  }
   .landscape-label {
     right: -5px;
   }
 }
 .contact {
-  min-height: 415px;
-  overflow: hidden;
-  padding-bottom: 70px;
+  padding-block: 64px 72px;
+}
+.contact .section-content {
+  max-width: 760px;
+}
+.contact .section-label {
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 28px;
 }
 .contact-copy {
-  position: relative;
-  z-index: 2;
-  width: 57%;
-  padding-top: 10px;
+  width: 100%;
+  text-align: center;
+}
+.contact-copy .contact-seal {
+  margin: 0 auto 24px;
 }
 .contact-copy h3 {
-  font-size: clamp(35px, 3.7vw, 49px);
+  font-size: clamp(35px, 4.2vw, 52px);
   letter-spacing: -0.025em;
-}
-.contact-break {
-  display: none;
+  line-height: 1.12;
+  max-width: 700px;
+  margin-inline: auto;
 }
 .contact-copy > p {
-  font-size: 12px;
-  max-width: 400px;
-  margin-top: 22px;
+  max-width: 480px;
+  margin: 22px auto 0;
+  font-size: 13px;
+  line-height: 1.9;
 }
 .contact-links {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 23px;
-  margin-top: 29px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  max-width: 420px;
+  margin: 32px auto 0;
+  align-items: stretch;
 }
 .contact-links .button {
+  min-width: 0;
+  min-height: 54px;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 8px;
   text-transform: none;
   font-size: 10px;
-  min-width: 110px;
-  padding: 11px 18px;
 }
 .contact-pending {
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
+  min-width: 0;
+  min-height: 54px;
   border: 1px solid var(--border);
-  padding: 8px 18px;
+  padding: 10px 8px;
   font-size: 10px;
-  min-width: 110px;
   line-height: 1.6;
   color: var(--muted);
 }
@@ -1357,30 +1358,18 @@ button:hover .arrow {
   font-size: 7px;
   color: var(--muted);
 }
-.contact-art {
-  position: absolute;
-  right: -30px;
-  bottom: -70px;
-  width: 60%;
-  pointer-events: none;
-}
-.contact-art .landscape {
-  width: 100%;
-}
-.contact-art > .star {
-  position: absolute;
-  left: 15%;
-  top: 52%;
-  width: 14px;
-  color: var(--silver);
-}
-.contact-art-label {
-  position: absolute;
-  right: 2%;
-  top: 45%;
-  color: var(--moss);
-  font-size: 8px;
-  letter-spacing: 0.08em;
+@media (max-width: 760px) {
+  .contact {
+    padding-block: 48px 56px;
+  }
+  .contact-copy > p {
+    font-size: 12px;
+    max-width: 350px;
+  }
+  .contact-links {
+    gap: 12px;
+    margin-top: 28px;
+  }
 }
 .footer {
   padding: 23px var(--gutter);
@@ -1408,47 +1397,7 @@ button:hover .arrow {
 .footer-inner a {
   padding-block: 8px;
 }
-@media (max-width: 1000px) {
-  .contact-copy {
-    width: 62%;
-  }
-  .contact-links {
-    gap: 12px;
-  }
-  .contact-art {
-    width: 56%;
-    bottom: -55px;
-    right: -35px;
-    opacity: 0.8;
-  }
-}
 @media (max-width: 760px) {
-  .contact {
-    padding-bottom: 30px;
-  }
-  .contact-copy {
-    width: 100%;
-    padding-top: 0;
-  }
-  .contact-copy h3 {
-    font-size: clamp(35px, 6vw, 46px);
-    max-width: 480px;
-  }
-  .contact-copy > p {
-    max-width: 365px;
-    font-size: 11px;
-  }
-  .contact-art {
-    position: relative;
-    width: 110%;
-    right: auto;
-    margin: -20px 0 -40px -6%;
-    bottom: auto;
-    opacity: 0.8;
-  }
-  .contact-art-label {
-    right: 6%;
-  }
   .footer-inner {
     flex-wrap: wrap;
     gap: 10px 20px;
@@ -1462,19 +1411,6 @@ button:hover .arrow {
   }
   .footer-inner a {
     margin-left: auto;
-  }
-}
-@media (max-width: 380px) {
-  .contact-links {
-    gap: 9px;
-  }
-  .contact-links .button,
-  .contact-pending {
-    min-width: 0;
-    padding-inline: 11px;
-  }
-  .contact-copy h3 {
-    font-size: 35px;
   }
 }
 .mobile-project-heading {

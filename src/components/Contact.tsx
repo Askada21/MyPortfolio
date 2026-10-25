@@ -1,5 +1,5 @@
 import { profile } from '../data/profile'
-import { Arrow, Landscape, SectionLabel, LineStar } from './Ornaments'
+import { Arrow, SectionLabel, LineStar } from './Ornaments'
 
 export default function Contact() {
   return (
@@ -7,10 +7,10 @@ export default function Contact() {
       <div className="section-content">
         <SectionLabel number="06">Contact</SectionLabel>
         <div className="contact-copy">
-          <h3>
-            Let’s build
-            <br className="contact-break" /> something together.
-          </h3>
+          <span className="contact-seal" aria-hidden="true">
+            <LineStar />
+          </span>
+          <h3>Let’s build something together.</h3>
           <p>I’m open to internship opportunities, collaborations and interesting projects.</p>
           <div className="contact-links">
             {profile.linkedin ? (
@@ -40,21 +40,6 @@ export default function Contact() {
               </span>
             )}
           </div>
-        </div>
-        <div className="contact-art">
-          <Landscape moon />
-          <span className="contact-art-label">
-            IDEAS
-            <br />
-            PEOPLE
-            <br />
-            PROJECTS
-            <br />
-            FUTURE
-          </span>
-          <span className="contact-seal" aria-hidden="true">
-            <LineStar />
-          </span>
         </div>
       </div>
     </section>
