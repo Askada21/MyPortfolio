@@ -5,6 +5,7 @@ import '@fontsource/cormorant-garamond/latin-500.css'
 import '@fontsource/dm-mono/latin-400.css'
 import './styles/variables.css'
 import './styles/global.css'
+import './styles/artwork.css'
 import './styles/animations.css'
 import App from './App'
 
