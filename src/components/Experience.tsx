@@ -22,13 +22,7 @@ export default function Experience() {
             ))}
           </ol>
           <div className="experience-landscape experience-botanical">
-            <span className="landscape-label">
-              SMALL STEPS.
-              <br />
-              WIDER HORIZONS.
-            </span>
             <DottedArtwork file="dotted-botanical-flowers.jpg" width={736} height={981} />
-            <span className="landscape-bottom">THE PATH IS MADE BY WALKING.</span>
           </div>
         </div>
       </div>

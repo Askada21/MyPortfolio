@@ -1091,22 +1091,6 @@ button:hover .arrow {
   position: relative;
   align-self: center;
 }
-.landscape-label {
-  position: absolute;
-  top: 0;
-  right: 0;
-  color: var(--muted);
-  font-size: 9px;
-  writing-mode: vertical-rl;
-  letter-spacing: 0.13em;
-}
-.landscape-bottom {
-  display: block;
-  text-align: center;
-  color: var(--moss);
-  font-size: 7px;
-  letter-spacing: 0.15em;
-}
 @media (max-width: 1000px) {
   .timeline li {
     grid-template-columns: 74px 1fr;
@@ -1138,9 +1122,6 @@ button:hover .arrow {
     max-width: 360px;
     margin: 12px auto 0;
     width: 100%;
-  }
-  .landscape-label {
-    right: -5px;
   }
 }
 .contact {
