@@ -1,6 +1,6 @@
-# Daria Osypova — Portfolio
+# Daria Osypova - Portfolio
 
-A personal portfolio for Daria Osypova, an aspiring software engineer and Data Science & Artificial Intelligence student in Dublin, Ireland. The design follows the supplied botanical editorial mockup: dark earthy surfaces, warm serif typography, fine rules, technical labels, and original SVG illustrations.
+<!-- A personal portfolio for Daria Osypova, an aspiring software engineer and Data Science & Artificial Intelligence student in Dublin, Ireland. The design follows the supplied botanical editorial mockup: dark earthy surfaces, warm serif typography, fine rules, technical labels, and original SVG illustrations.
 
 ## Features
 
@@ -161,4 +161,4 @@ npm run build
 npm run preview
 ```
 
-Development QA included browser checks at 320, 375, 768, 1024, 1440, and 1920 pixels; anchor targets and image loading; mobile menu selection and Escape; keyboard project selection; and flytrap closing and reopening. No horizontal overflow was found at those widths. This is a manual browser verification, not a claim of an exhaustive automated test suite.
+Development QA included browser checks at 320, 375, 768, 1024, 1440, and 1920 pixels; anchor targets and image loading; mobile menu selection and Escape; keyboard project selection; and flytrap closing and reopening. No horizontal overflow was found at those widths. This is a manual browser verification, not a claim of an exhaustive automated test suite. -->
