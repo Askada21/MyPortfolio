@@ -95,13 +95,15 @@
 
 .portrait-corner {
   position: absolute;
-  z-index: 1;
-  right: -42px;
-  bottom: -36px;
+  z-index: 3;
+  right: -20px;
+  bottom: -24px;
   width: 300px;
   max-width: none;
   transform: rotate(180deg);
   opacity: 0.72;
+  /* The source rotates 180deg, so this clip becomes a bottom/right overlay and keeps the face area clear. */
+  clip-path: polygon(0 0, 100% 0, 100% 28%, 28% 28%, 28% 100%, 0 100%);
 }
 
 .portrait-star,
@@ -116,8 +118,8 @@
 
   .portrait-corner {
     width: 230px;
-    right: -10px;
-    bottom: -26px;
+    right: -6px;
+    bottom: -16px;
   }
 }
 
@@ -138,30 +140,51 @@
   flex-shrink: 0;
 }
 
-.about-floral {
-  position: absolute;
-  width: 140px;
-  max-width: none;
-  top: 65px;
-  right: -55px;
-  opacity: 0.5;
-  /* Keep the petals and exclude controls captured in the original screenshot. */
-  clip-path: polygon(2% 2%, 98% 2%, 98% 65%, 85% 65%, 85% 98%, 2% 98%);
-}
-
-@media (max-width: 1279px) {
-  .about-floral {
-    position: relative;
-    inset: auto;
-    width: 72px;
-    margin: 10px 0 -12px auto;
-    transform: rotate(-12deg);
-    opacity: 0.4;
-  }
-}
-
 @media (max-width: 380px) {
   .hero h1 .star {
     margin-left: -8px;
+  }
+}
+
+.about .section-content {
+  isolation: isolate;
+}
+
+.about-copy {
+  z-index: 1;
+}
+
+.portrait-composition {
+  z-index: 2;
+}
+
+.about-floral {
+  position: absolute;
+  z-index: 0;
+  width: clamp(300px, 34vw, 500px);
+  max-width: none;
+  top: 25px;
+  right: -65px;
+  transform: rotate(-12deg);
+  opacity: 0.14;
+  clip-path: polygon(2% 2%, 98% 2%, 98% 65%, 85% 65%, 85% 98%, 2% 98%);
+}
+
+@media (max-width: 1000px) {
+  .about-floral {
+    width: 360px;
+    right: -60px;
+    top: 65px;
+    opacity: 0.12;
+  }
+}
+
+@media (max-width: 760px) {
+  .about-floral {
+    width: min(360px, 110%);
+    top: auto;
+    right: -48px;
+    bottom: 42px;
+    opacity: 0.1;
   }
 }
