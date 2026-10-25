@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <section id="contact" className="section contact">
       <div className="section-content">
-        <SectionLabel number="07">Contact</SectionLabel>
+        <SectionLabel number="06">Contact</SectionLabel>
         <div className="contact-copy">
           <h3>
             Let’s build

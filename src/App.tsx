@@ -4,7 +4,6 @@ import About from './components/About'
 import TechStack from './components/TechStack'
 import Projects from './components/Projects'
 import Experience from './components/Experience'
-import Certificates from './components/Certificates'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import { useScrollReveal } from './hooks/useScrollReveal'
@@ -23,7 +22,6 @@ export default function App() {
         <TechStack />
         <Projects />
         <Experience />
-        <Certificates />
         <Contact />
       </main>
       <Footer />

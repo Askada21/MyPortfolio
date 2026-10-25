@@ -121,11 +121,6 @@
   }
 }
 
-.achievement-emblem .star {
-  width: 37.5px;
-  height: 37.5px;
-}
-
 .line-star {
   width: 18px;
   height: 18px;
@@ -147,13 +142,6 @@
   position: absolute;
   left: 15%;
   top: 52%;
-}
-
-@media (max-width: 760px) {
-  .achievement-emblem .star {
-    width: 28.75px;
-    height: 28.75px;
-  }
 }
 
 .about-floral {

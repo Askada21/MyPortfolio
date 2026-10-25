@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { LineStar } from './Ornaments'
 
-const links = ['About', 'Projects', 'Experience', 'Certificates', 'Contact']
+const links = ['About', 'Projects', 'Experience', 'Contact']
 
 export default function Header() {
   const [open, setOpen] = useState(false)
