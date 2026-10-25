@@ -816,67 +816,6 @@ button:hover .arrow {
   color: var(--muted);
   letter-spacing: 0.06em;
 }
-.database-diagram {
-  transform: rotate(-7deg);
-  margin: 35px 12px;
-  position: relative;
-}
-.database-diagram > div {
-  border: 1px solid #7a86685c;
-  background: #1c2219;
-  font-size: 6px;
-  box-shadow: 0 10px 20px #0005;
-}
-.database-diagram > div > span {
-  display: block;
-  padding: 9px;
-  background: #78856826;
-  letter-spacing: 0.15em;
-  color: #c2c9b4;
-}
-.database-diagram p {
-  padding: 5px 8px;
-  border-top: 1px solid #78856826;
-  white-space: nowrap;
-  font-size: 7px;
-}
-.database-diagram i {
-  font-style: normal;
-  float: right;
-  color: var(--muted);
-  font-size: 5px;
-  margin-top: 2px;
-}
-.diagram-connector {
-  display: block;
-  font-size: 11px;
-  line-height: 1;
-  color: var(--moss);
-  margin-left: 25px;
-  height: 30px;
-}
-.tracker-diagram {
-  position: relative;
-  margin: 20px 15px;
-  font-size: 6px;
-  letter-spacing: 0.08em;
-}
-.chart-bars {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 8px;
-  height: 145px;
-  padding: 15px 0 0;
-  margin-bottom: 12px;
-  border-bottom: 1px solid var(--moss);
-  background: repeating-linear-gradient(to top, transparent 0 35px, #78856825 35px 36px);
-}
-.chart-bars span {
-  width: 15px;
-  background: #78856880;
-  border-top: 1px solid #bdc6a8;
-}
 .workspace-diagram {
   margin: 20px 12px;
   transform: rotate(-5deg);
@@ -995,16 +934,6 @@ button:hover .arrow {
   .project-artwork {
     padding-inline: 30px;
   }
-  .database-diagram {
-    transform: rotate(-5deg) scale(0.85);
-    display: flex;
-    gap: 12px;
-    align-items: center;
-    margin: 25px 0;
-  }
-  .diagram-connector {
-    display: none;
-  }
   .project-details h3 {
     margin-bottom: 10px;
   }
@@ -1016,14 +945,6 @@ button:hover .arrow {
   }
   .project-details .project-type {
     display: none;
-  }
-  .tracker-diagram {
-    max-width: 170px;
-    margin-inline: auto;
-    width: 100%;
-  }
-  .chart-bars {
-    height: 100px;
   }
   .workspace-diagram {
     max-width: 230px;
@@ -1091,20 +1012,6 @@ button:hover .arrow {
   .project-artwork,
   .project-image {
     height: 220px;
-  }
-  .database-diagram {
-    max-width: 180px;
-    width: 100%;
-    margin-inline: auto;
-    transform: rotate(-6deg) scale(0.8);
-  }
-  .tracker-diagram {
-    max-width: 200px;
-    margin-inline: auto;
-    width: 100%;
-  }
-  .chart-bars {
-    height: 130px;
   }
   .workspace-diagram {
     max-width: 240px;
@@ -1380,5 +1287,17 @@ button:hover .arrow {
   }
   .personal-info {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 761px) {
+  .project-list {
+    display: grid;
+    grid-auto-rows: 1fr;
+  }
+
+  .project-selector {
+    height: 100%;
+    min-height: 150px;
   }
 }

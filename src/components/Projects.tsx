@@ -23,68 +23,28 @@ function ProjectArtwork({ project }: { project: Project }) {
       aria-label={`Illustrative placeholder for ${project.title}; not a project screenshot`}
     >
       <span className="artwork-caption">CONCEPT STUDY / {project.id}</span>
-      {project.artwork === 'database' ? (
-        <div className="database-diagram">
-          <div>
-            <span>BOOKS</span>
-            <p>
-              id <i>int · primary key</i>
-            </p>
-            <p>
-              title <i>varchar</i>
-            </p>
-            <p>
-              author_id <i>int · foreign key</i>
-            </p>
-          </div>
-          <span className="diagram-connector">
-            │<br />
-            └─────┐
+      <div className="workspace-diagram">
+        <div>
+          WORKSPACE <span>○ ○ ○</span>
+        </div>
+        <p>
+          <span>Ideas</span>
+          <span>In progress</span>
+        </p>
+        <p>
+          <span>
+            01 / Explore
+            <br />
+            02 / Build
           </span>
-          <div>
-            <span>AUTHORS</span>
-            <p>
-              id <i>int · primary key</i>
-            </p>
-            <p>
-              name <i>varchar</i>
-            </p>
-          </div>
-        </div>
-      ) : project.artwork === 'tracker' ? (
-        <div className="tracker-diagram">
-          <span>STUDY / REFLECT / REPEAT</span>
-          <div className="chart-bars">
-            {[35, 60, 45, 80, 55, 92, 68].map((n, i) => (
-              <span key={i} style={{ height: `${n}%` }} />
-            ))}
-          </div>
-          <span>M &nbsp; T &nbsp; W &nbsp; T &nbsp; F &nbsp; S &nbsp; S</span>
-        </div>
-      ) : (
-        <div className="workspace-diagram">
-          <div>
-            WORKSPACE <span>○ ○ ○</span>
-          </div>
-          <p>
-            <span>Ideas</span>
-            <span>In progress</span>
-          </p>
-          <p>
-            <span>
-              01 / Explore
-              <br />
-              02 / Build
-            </span>
-            <span>
-              03 / Connect
-              <br />
-              04 / Share
-            </span>
-          </p>
-          <Star />
-        </div>
-      )}
+          <span>
+            03 / Connect
+            <br />
+            04 / Share
+          </span>
+        </p>
+        <Star />
+      </div>
       <figcaption>ILLUSTRATIVE PREVIEW · SCREENSHOT TO COME</figcaption>
     </figure>
   )

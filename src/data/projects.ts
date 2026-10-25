@@ -7,29 +7,12 @@ export interface Project {
   demo?: string
   image?: string
   imageAlt?: string
-  artwork: 'database' | 'tracker' | 'workspace' | 'web'
+  artwork: 'workspace' | 'web'
 }
 
 export const projects: Project[] = [
   {
     id: '01',
-    title: 'SQL Book Database',
-    description:
-      'Relational database project using PostgreSQL, featuring SQL queries, joins, filtering, grouping and data retrieval.',
-    technologies: ['SQL', 'PostgreSQL', 'DBeaver'],
-    artwork: 'database',
-  },
-  {
-    id: '02',
-    title: 'Study Tracker',
-    description:
-      'Python-based study tracking and data analysis project using CSV datasets and Pandas to explore study habits and productivity.',
-    technologies: ['Python', 'Pandas', 'CSV'],
-    github: 'https://github.com/Askada21/dcp-assignment',
-    artwork: 'tracker',
-  },
-  {
-    id: '03',
     title: 'TWorkspace',
     description:
       'A temporary collaborative workspace developed during a MongoDB hackathon, supporting shared workspaces and collaboration features.',
@@ -38,7 +21,7 @@ export const projects: Project[] = [
     artwork: 'workspace',
   },
   {
-    id: '04',
+    id: '02',
     title: 'Web Development Project',
     description:
       'A responsive web development project featuring interactive filtering, navigation and form validation.',
