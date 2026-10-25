@@ -1,11 +1,18 @@
-/* Screen blending removes the inverted white paper without altering the original dot pattern. */
+/* Invert a luminance mask to remove white paper while preserving the original dotted pixels. */
 .dotted-artwork {
   display: block;
   max-width: 100%;
   height: auto;
   object-fit: contain;
-  filter: invert(1) contrast(1.15);
-  mix-blend-mode: screen;
+  filter: brightness(0) invert(1);
+  mask-image: linear-gradient(#fff, #fff), var(--artwork-source);
+  mask-mode: alpha, luminance;
+  mask-composite: exclude;
+  mask-size:
+    100% 100%,
+    contain;
+  mask-position: center;
+  mask-repeat: no-repeat;
   opacity: 0.68;
   pointer-events: none;
   user-select: none;
@@ -74,4 +81,45 @@
 .portrait-star {
   width: 40px;
   height: 40px;
+}
+
+.portrait-composition {
+  isolation: isolate;
+  margin-bottom: 32px;
+}
+
+.portrait-backdrop {
+  z-index: 0;
+}
+
+.portrait-frame {
+  z-index: 2;
+}
+
+.portrait-corner {
+  position: absolute;
+  z-index: 1;
+  right: -34px;
+  bottom: -44px;
+  width: 260px;
+  max-width: none;
+  transform: rotate(180deg);
+  opacity: 0.58;
+}
+
+.portrait-star,
+.portrait-note {
+  z-index: 3;
+}
+
+@media (max-width: 760px) {
+  .portrait-composition {
+    margin-bottom: 22px;
+  }
+
+  .portrait-corner {
+    width: 200px;
+    right: -12px;
+    bottom: -28px;
+  }
 }

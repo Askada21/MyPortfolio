@@ -1,3 +1,5 @@
+import type { CSSProperties } from 'react'
+
 interface DottedArtworkProps {
   file: string
   width: number
@@ -14,10 +16,12 @@ export default function DottedArtwork({
   className = '',
   loading = 'lazy',
 }: DottedArtworkProps) {
+  const source = `${import.meta.env.BASE_URL}assets/images/${file}`
   return (
     <img
       className={`dotted-artwork ${className}`}
-      src={`${import.meta.env.BASE_URL}assets/images/${file}`}
+      src={source}
+      style={{ '--artwork-source': `url("${source}")` } as CSSProperties}
       width={width}
       height={height}
       alt=""

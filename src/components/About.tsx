@@ -1,5 +1,6 @@
 import { profile } from '../data/profile'
 import { Branch, SectionLabel, Star } from './Ornaments'
+import DottedArtwork from './DottedArtwork'
 
 function InfoIcon({ type }: { type: 'location' | 'study' | 'laptop' | 'flower' }) {
   const paths = {
@@ -41,6 +42,12 @@ export default function About() {
         <div className="about-layout">
           <div className="portrait-composition">
             <div className="portrait-backdrop" />
+            <DottedArtwork
+              file="dotted-botanical-frame.jpg"
+              width={736}
+              height={686}
+              className="portrait-corner"
+            />
             <div className="portrait-frame">
               {profile.portrait ? (
                 <img
