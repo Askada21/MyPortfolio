@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { projects } from '../data/projects'
 import type { Project } from '../data/projects'
 import { Arrow, Branch, SectionLabel, Star } from './Ornaments'
+import DottedArtwork from './DottedArtwork'
 
 function ProjectArtwork({ project }: { project: Project }) {
   if (project.image)
@@ -142,6 +143,12 @@ export default function Projects() {
       <div className="section-content">
         <div className="section-heading">
           <SectionLabel number="04">Featured projects</SectionLabel>
+          <DottedArtwork
+            file="dotted-floral.jpg"
+            width={766}
+            height={734}
+            className="projects-floral"
+          />
           <span className="section-aside">
             / SELECTED WORK ({projects.length.toString().padStart(2, '0')})
           </span>

@@ -123,3 +123,26 @@
     bottom: -28px;
   }
 }
+
+.projects .section-heading {
+  position: relative;
+}
+
+.projects-floral {
+  position: absolute;
+  width: 100px;
+  right: 20%;
+  top: -24px;
+  opacity: 0.38;
+  transform: rotate(-12deg);
+  /* Exclude screenshot controls in the empty lower-right corner of the supplied image. */
+  clip-path: polygon(0 0, 100% 0, 100% 65%, 85% 65%, 85% 100%, 0 100%);
+}
+
+@media (max-width: 760px) {
+  .projects-floral {
+    width: 48px;
+    right: 0;
+    top: -12px;
+  }
+}
