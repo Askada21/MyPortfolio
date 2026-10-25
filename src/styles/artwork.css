@@ -44,12 +44,12 @@
 
 .star {
   display: inline-block;
-  width: 28px;
-  height: 28px;
-  min-width: 20px;
-  min-height: 20px;
-  max-width: 40px;
-  max-height: 40px;
+  width: 35px;
+  height: 35px;
+  min-width: 25px;
+  min-height: 25px;
+  max-width: 50px;
+  max-height: 50px;
   line-height: 0;
   vertical-align: middle;
   pointer-events: none;
@@ -62,25 +62,22 @@
   opacity: 0.9;
 }
 
-.wordmark .star,
-.header-seal .star,
 .preview-star,
 .workspace-diagram .star,
 .art-star,
-.contact-art > .star,
 .footer-flower {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
 }
 
 .hero h1 .star {
-  width: clamp(24px, 2.5vw, 32px);
-  height: clamp(24px, 2.5vw, 32px);
+  width: clamp(30px, 3.125vw, 40px);
+  height: clamp(30px, 3.125vw, 40px);
 }
 
 .portrait-star {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
 }
 
 .portrait-composition {
@@ -144,5 +141,40 @@
     width: 48px;
     right: 0;
     top: -12px;
+  }
+}
+
+.achievement-emblem .star {
+  width: 37.5px;
+  height: 37.5px;
+}
+
+.line-star {
+  width: 18px;
+  height: 18px;
+  color: var(--silver);
+  pointer-events: none;
+}
+
+.contact-seal {
+  display: grid;
+  place-items: center;
+  width: 31px;
+  height: 31px;
+  border: 1px solid var(--olive);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.contact-art .contact-seal {
+  position: absolute;
+  left: 15%;
+  top: 52%;
+}
+
+@media (max-width: 760px) {
+  .achievement-emblem .star {
+    width: 28.75px;
+    height: 28.75px;
   }
 }

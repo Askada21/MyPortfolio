@@ -12,6 +12,16 @@ export function Star({ className = '', size }: { className?: string; size?: numb
   )
 }
 
+/** Original line ornament, retained for circular contact emblems. */
+export function LineStar() {
+  return (
+    <svg className="line-star" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+      <path d="M24 0v48M0 24h48M7 7l34 34M7 41 41 7" stroke="currentColor" strokeWidth=".7" />
+      <path d="m24 9 3 12 12 3-12 3-3 12-3-12-12-3 12-3Z" fill="currentColor" />
+    </svg>
+  )
+}
+
 export function SectionLabel({ number, children }: { number: string; children: React.ReactNode }) {
   return (
     <div className="section-label">

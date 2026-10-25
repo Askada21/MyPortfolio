@@ -1,5 +1,5 @@
 import { profile } from '../data/profile'
-import { Arrow, Landscape, SectionLabel, Star } from './Ornaments'
+import { Arrow, Landscape, SectionLabel, LineStar } from './Ornaments'
 
 export default function Contact() {
   return (
@@ -52,7 +52,9 @@ export default function Contact() {
             <br />
             FUTURE
           </span>
-          <Star />
+          <span className="contact-seal" aria-hidden="true">
+            <LineStar />
+          </span>
         </div>
       </div>
     </section>

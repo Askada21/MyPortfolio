@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { Star } from './Ornaments'
+import { LineStar } from './Ornaments'
 
 const links = ['About', 'Projects', 'Experience', 'Certificates', 'Contact']
 
@@ -49,7 +49,7 @@ export default function Header() {
           onClick={() => setOpen(false)}
           aria-label="Daria Osypova, home"
         >
-          DARIA OSYPOVA <Star />
+          DARIA OSYPOVA
         </a>
         <button
           ref={toggle}
@@ -76,7 +76,7 @@ export default function Header() {
             </a>
           ))}
           <span className="header-seal" aria-hidden="true">
-            <Star />
+            <LineStar />
           </span>
         </nav>
       </div>
