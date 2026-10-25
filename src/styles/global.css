@@ -274,22 +274,6 @@ button:hover .arrow {
 .hero-actions .text-link {
   text-transform: uppercase;
 }
-.scroll-link {
-  display: flex;
-  gap: 32px;
-  align-items: center;
-  width: fit-content;
-  margin-top: 70px;
-  font-size: 8px;
-  line-height: 1.6;
-  color: var(--muted);
-  letter-spacing: 0.06em;
-}
-.scroll-link > span {
-  width: 1px;
-  height: 30px;
-  background: var(--moss);
-}
 .hero-art {
   position: relative;
   width: 100%;
@@ -305,33 +289,6 @@ button:hover .arrow {
   width: 50px;
   border-left: 1px solid var(--olive);
   border-bottom: 1px solid var(--olive);
-}
-.plant-caption {
-  position: absolute;
-  top: 65px;
-  right: 0;
-  font-size: 9px;
-  line-height: 1.6;
-  color: var(--muted);
-}
-.plant-caption > span {
-  font-size: 8px;
-  color: var(--moss);
-}
-.vertical-note {
-  position: absolute;
-  bottom: 35px;
-  right: -8px;
-  writing-mode: vertical-rl;
-  font-size: 9px;
-  letter-spacing: 0.2em;
-  color: var(--muted);
-}
-.art-star {
-  position: absolute;
-  top: 55%;
-  right: 6px;
-  width: 17px;
 }
 .section-label {
   display: flex;
@@ -374,9 +331,6 @@ button:hover .arrow {
   }
   .hero h1 {
     font-size: 8vw;
-  }
-  .plant-caption {
-    top: 20px;
   }
 }
 @media (max-width: 760px) {
@@ -458,9 +412,6 @@ button:hover .arrow {
     width: min(100%, 470px);
     margin-top: -25px;
   }
-  .scroll-link {
-    margin-top: 28px;
-  }
   .eyebrow {
     gap: 38px;
     margin-bottom: 20px;
@@ -468,20 +419,12 @@ button:hover .arrow {
   .hero-art::before {
     display: none;
   }
-  .plant-caption {
-    top: 70px;
-    right: 0;
-    font-size: 8px;
-  }
   .section-label {
     gap: 28px;
     margin-bottom: 28px;
   }
   .section-label h2 {
     font-size: 12px;
-  }
-  .vertical-note {
-    right: 0;
   }
 }
 @media (max-width: 380px) {
@@ -1437,11 +1380,5 @@ button:hover .arrow {
   }
   .personal-info {
     grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 760px) {
-  .plant-caption {
-    display: none;
   }
 }

@@ -156,9 +156,6 @@ export default function VenusFlytrap() {
           <path d="M49 113h77l21 20" />
         </g>
       </svg>
-      <span className="plant-instruction">
-        {closed ? 'A moment of stillness.' : 'TOUCH TO CLOSE ↗'}
-      </span>
     </button>
   )
 }

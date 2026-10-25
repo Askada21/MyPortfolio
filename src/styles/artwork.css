@@ -64,15 +64,15 @@
 
 .preview-star,
 .workspace-diagram .star,
-.art-star,
 .footer-flower {
   width: 25px;
   height: 25px;
 }
 
 .hero h1 .star {
-  width: clamp(30px, 3.125vw, 40px);
-  height: clamp(30px, 3.125vw, 40px);
+  width: clamp(36px, 3.75vw, 48px);
+  height: clamp(36px, 3.75vw, 48px);
+  transform: translateY(clamp(-14px, -0.9vw, -8px));
 }
 
 .portrait-star {
@@ -157,5 +157,11 @@
     margin: 10px 0 -12px auto;
     transform: rotate(-12deg);
     opacity: 0.4;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero h1 .star {
+    margin-left: -8px;
   }
 }

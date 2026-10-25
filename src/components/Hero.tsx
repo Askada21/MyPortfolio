@@ -36,23 +36,9 @@ export default function Hero() {
             GitHub <Arrow />
           </a>
         </div>
-        <a href="#about" className="scroll-link">
-          SCROLL
-          <br />
-          TO EXPLORE <span aria-hidden="true" />
-        </a>
       </div>
       <div className="hero-art">
         <VenusFlytrap />
-        <span className="plant-caption">
-          Dionaea muscipula
-          <br />
-          <span>Venus flytrap / fig. 01</span>
-        </span>
-        <span className="vertical-note" aria-hidden="true">
-          CODE · DATA · IDEAS · GROW
-        </span>
-        <Star className="art-star" />
       </div>
     </section>
   )

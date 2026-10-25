@@ -43,14 +43,6 @@
   animation: none;
   transform: scaleX(0.12);
 }
-.plant-instruction {
-  position: absolute;
-  left: 18%;
-  bottom: 16px;
-  font-size: 8px;
-  color: var(--muted);
-  letter-spacing: 0.1em;
-}
 @keyframes sway {
   0%,
   100% {
