@@ -648,15 +648,6 @@ button:hover .arrow {
   flex-shrink: 0;
   color: var(--silver);
 }
-.about-branch {
-  position: absolute;
-  right: -130px;
-  top: 0;
-  width: 210px;
-  height: 290px;
-  opacity: 0.65;
-  pointer-events: none;
-}
 .tech-stack {
   padding-block: 43px 48px;
 }
@@ -729,9 +720,6 @@ button:hover .arrow {
   .about-copy h3 {
     font-size: 34px;
     max-width: 430px;
-  }
-  .about-branch {
-    display: none;
   }
   .personal-info {
     max-width: 460px;
@@ -875,16 +863,6 @@ button:hover .arrow {
   font-size: 7px;
   color: var(--muted);
   letter-spacing: 0.08em;
-}
-.project-artwork > .branch {
-  position: absolute;
-  width: 180px;
-  height: 290px;
-  right: -70px;
-  bottom: -20px;
-  color: var(--moss);
-  opacity: 0.35;
-  transform: rotate(40deg);
 }
 .project-artwork figcaption,
 .project-image figcaption {
@@ -1179,10 +1157,6 @@ button:hover .arrow {
     width: 100%;
     margin-inline: auto;
     transform: rotate(-6deg) scale(0.8);
-  }
-  .project-artwork > .branch {
-    right: -20px;
-    opacity: 0.5;
   }
   .tracker-diagram {
     max-width: 200px;

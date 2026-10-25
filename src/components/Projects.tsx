@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import { projects } from '../data/projects'
 import type { Project } from '../data/projects'
-import { Arrow, Branch, SectionLabel, Star } from './Ornaments'
-import DottedArtwork from './DottedArtwork'
+import { Arrow, SectionLabel, Star } from './Ornaments'
 
 function ProjectArtwork({ project }: { project: Project }) {
   if (project.image)
@@ -24,7 +23,6 @@ function ProjectArtwork({ project }: { project: Project }) {
       aria-label={`Illustrative placeholder for ${project.title}; not a project screenshot`}
     >
       <span className="artwork-caption">CONCEPT STUDY / {project.id}</span>
-      <Branch />
       {project.artwork === 'database' ? (
         <div className="database-diagram">
           <div>
@@ -143,12 +141,6 @@ export default function Projects() {
       <div className="section-content">
         <div className="section-heading">
           <SectionLabel number="04">Featured projects</SectionLabel>
-          <DottedArtwork
-            file="dotted-floral.jpg"
-            width={766}
-            height={734}
-            className="projects-floral"
-          />
           <span className="section-aside">
             / SELECTED WORK ({projects.length.toString().padStart(2, '0')})
           </span>

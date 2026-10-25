@@ -121,29 +121,6 @@
   }
 }
 
-.projects .section-heading {
-  position: relative;
-}
-
-.projects-floral {
-  position: absolute;
-  width: 100px;
-  right: 20%;
-  top: -24px;
-  opacity: 0.38;
-  transform: rotate(-12deg);
-  /* Exclude screenshot controls in the empty lower-right corner of the supplied image. */
-  clip-path: polygon(0 0, 100% 0, 100% 65%, 85% 65%, 85% 100%, 0 100%);
-}
-
-@media (max-width: 760px) {
-  .projects-floral {
-    width: 48px;
-    right: 0;
-    top: -12px;
-  }
-}
-
 .achievement-emblem .star {
   width: 37.5px;
   height: 37.5px;
@@ -176,5 +153,27 @@
   .achievement-emblem .star {
     width: 28.75px;
     height: 28.75px;
+  }
+}
+
+.about-floral {
+  position: absolute;
+  width: 140px;
+  max-width: none;
+  top: 65px;
+  right: -55px;
+  opacity: 0.5;
+  /* Keep the petals and exclude controls captured in the original screenshot. */
+  clip-path: polygon(2% 2%, 98% 2%, 98% 65%, 85% 65%, 85% 98%, 2% 98%);
+}
+
+@media (max-width: 1279px) {
+  .about-floral {
+    position: relative;
+    inset: auto;
+    width: 72px;
+    margin: 10px 0 -12px auto;
+    transform: rotate(-12deg);
+    opacity: 0.4;
   }
 }
