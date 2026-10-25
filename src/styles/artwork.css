@@ -34,3 +34,44 @@
     margin-bottom: 15px;
   }
 }
+
+.star {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  min-width: 20px;
+  min-height: 20px;
+  max-width: 40px;
+  max-height: 40px;
+  line-height: 0;
+  vertical-align: middle;
+  pointer-events: none;
+}
+
+.star .dotted-artwork {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  opacity: 0.9;
+}
+
+.wordmark .star,
+.header-seal .star,
+.preview-star,
+.workspace-diagram .star,
+.art-star,
+.contact-art > .star,
+.footer-flower {
+  width: 20px;
+  height: 20px;
+}
+
+.hero h1 .star {
+  width: clamp(24px, 2.5vw, 32px);
+  height: clamp(24px, 2.5vw, 32px);
+}
+
+.portrait-star {
+  width: 40px;
+  height: 40px;
+}

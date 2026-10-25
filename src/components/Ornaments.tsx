@@ -1,9 +1,14 @@
-export function Star({ className = '' }: { className?: string }) {
+import DottedArtwork from './DottedArtwork'
+
+export function Star({ className = '', size }: { className?: string; size?: number }) {
   return (
-    <svg className={`star ${className}`} viewBox="0 0 48 48" fill="none" aria-hidden="true">
-      <path d="M24 0v48M0 24h48M7 7l34 34M7 41 41 7" stroke="currentColor" strokeWidth=".7" />
-      <path d="m24 9 3 12 12 3-12 3-3 12-3-12-12-3 12-3Z" fill="currentColor" />
-    </svg>
+    <span
+      className={`star ${className}`}
+      style={size === undefined ? undefined : { width: size, height: size }}
+      aria-hidden="true"
+    >
+      <DottedArtwork file="dotted-star.jpg" width={736} height={736} loading="eager" />
+    </span>
   )
 }
 
