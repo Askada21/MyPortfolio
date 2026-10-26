@@ -23,22 +23,9 @@
   padding: 20px 30px 0;
 }
 
-.experience-botanical .dotted-artwork {
-  width: min(100%, 340px);
-  max-height: 440px;
-  margin-inline: auto;
-  margin-bottom: 22px;
-}
-
 @media (max-width: 760px) {
   .experience-botanical {
     padding-top: 8px;
-  }
-
-  .experience-botanical .dotted-artwork {
-    width: 200px;
-    max-height: 270px;
-    margin-bottom: 15px;
   }
 }
 
@@ -63,16 +50,9 @@
 }
 
 .preview-star,
-.workspace-diagram .star,
 .footer-flower {
   width: 25px;
   height: 25px;
-}
-
-.hero h1 .star {
-  width: clamp(36px, 3.75vw, 48px);
-  height: clamp(36px, 3.75vw, 48px);
-  transform: translateY(clamp(-14px, -0.9vw, -8px));
 }
 
 .portrait-star {
@@ -140,12 +120,6 @@
   flex-shrink: 0;
 }
 
-@media (max-width: 380px) {
-  .hero h1 .star {
-    margin-left: -8px;
-  }
-}
-
 .about .section-content {
   isolation: isolate;
 }
@@ -186,5 +160,35 @@
     right: -48px;
     bottom: 42px;
     opacity: 0.1;
+  }
+}
+
+.dotted-artwork-tinted {
+  filter: none;
+  background-color: var(--artwork-ink);
+}
+
+.dotted-artwork-source {
+  display: block;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.spider-lily {
+  display: block;
+  width: min(100%, 360px);
+  height: auto;
+  max-height: 470px;
+  margin-inline: auto;
+  overflow: visible;
+  pointer-events: none;
+}
+
+@media (max-width: 760px) {
+  .spider-lily {
+    width: 220px;
+    max-height: 300px;
   }
 }

@@ -28,8 +28,6 @@ export const projects: Project[] = [
     technologies: ['HTML', 'CSS', 'JavaScript'],
     github: 'https://github.com/Askada21/WebDev_Project_RDE',
     demo: 'https://askada21.github.io/WebDev_Project_RDE/',
-    image: 'assets/images/web-development.jpg',
-    imageAlt: 'Wheels on Fire live website with a winding road hero and car collection filters.',
     artwork: 'web',
   },
 ]

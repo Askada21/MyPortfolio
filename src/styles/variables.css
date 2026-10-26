@@ -1,6 +1,9 @@
 :root {
   --bg: #10120f;
   --bg-secondary: #191c17;
+  --bg-alternate: #141712;
+  --ivory: #dcddd2;
+  --section-rule: #505847;
   --text: #e4dfd3;
   --muted: #a8ad9f;
   --moss: #788568;

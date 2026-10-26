@@ -7,7 +7,13 @@ export function Star({ className = '', size }: { className?: string; size?: numb
       style={size === undefined ? undefined : { width: size, height: size }}
       aria-hidden="true"
     >
-      <DottedArtwork file="dotted-star.jpg" width={736} height={736} loading="eager" />
+      <DottedArtwork
+        file="dotted-star.jpg"
+        width={736}
+        height={736}
+        loading="eager"
+        ink="var(--ivory)"
+      />
     </span>
   )
 }
@@ -18,6 +24,19 @@ export function LineStar() {
     <svg className="line-star" viewBox="0 0 48 48" fill="none" aria-hidden="true">
       <path d="M24 0v48M0 24h48M7 7l34 34M7 41 41 7" stroke="currentColor" strokeWidth=".7" />
       <path d="m24 9 3 12 12 3-12 3-3 12-3-12-12-3 12-3Z" fill="currentColor" />
+    </svg>
+  )
+}
+
+export function Sparkle() {
+  return (
+    <svg className="hero-sparkle" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+      <path
+        d="M20 2C20 15 25 20 38 20 25 20 20 25 20 38 20 25 15 20 2 20 15 20 20 15 20 2Z"
+        stroke="currentColor"
+        strokeWidth="0.8"
+      />
+      <path d="m20 15 2 5-2 5-2-5Z" fill="currentColor" />
     </svg>
   )
 }

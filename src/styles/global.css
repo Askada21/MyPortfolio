@@ -61,8 +61,8 @@ body::before {
 }
 .section {
   position: relative;
-  padding: 56px var(--gutter);
-  border-bottom: 1px solid var(--border);
+  padding: 72px var(--gutter);
+  border-bottom: 1px solid var(--section-rule);
 }
 .section > *,
 .header-inner,
@@ -111,16 +111,13 @@ button:hover .arrow {
   letter-spacing: 0.09em;
   white-space: nowrap;
 }
-.wordmark .star {
-  width: 19px;
-}
 .navigation {
   display: flex;
   gap: clamp(20px, 3.1vw, 45px);
   align-items: center;
 }
 .navigation a {
-  font-size: 10px;
+  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.07em;
   padding-block: 12px;
@@ -149,9 +146,6 @@ button:hover .arrow {
   height: 31px;
   border: 1px solid var(--olive);
   border-radius: 50%;
-}
-.header-seal .star {
-  width: 18px;
 }
 .menu-toggle {
   display: none;
@@ -213,13 +207,6 @@ button:hover .arrow {
 .heading-period {
   margin-left: -0.18em;
   color: var(--moss);
-}
-.hero h1 .star {
-  flex-shrink: 0;
-  width: 31px;
-  height: 31px;
-  color: var(--silver);
-  margin-left: 7px;
 }
 .hero-subtitle {
   margin-top: 10px;
@@ -294,7 +281,7 @@ button:hover .arrow {
   display: flex;
   align-items: center;
   gap: 48px;
-  margin-bottom: 32px;
+  margin-bottom: 40px;
 }
 .section-label > span {
   font-size: 10px;
@@ -377,7 +364,7 @@ button:hover .arrow {
     display: none;
   }
   .section {
-    padding-block: 40px;
+    padding-block: 52px;
   }
   .hero {
     grid-template-columns: 1fr;
@@ -390,9 +377,6 @@ button:hover .arrow {
   }
   .hero h1 {
     font-size: clamp(59px, 12vw, 88px);
-  }
-  .hero h1 .star {
-    width: 24px;
   }
   .hero-subtitle {
     font-size: 11px;
@@ -430,10 +414,6 @@ button:hover .arrow {
 @media (max-width: 380px) {
   .hero h1 {
     font-size: 54px;
-  }
-  .hero h1 .star {
-    width: 19px;
-    margin-left: 0;
   }
   .mobile-break {
     display: block;
@@ -589,7 +569,7 @@ button:hover .arrow {
   color: var(--silver);
 }
 .tech-stack {
-  padding-block: 43px 48px;
+  padding-block: 56px 60px;
 }
 .skill-groups {
   display: grid;
@@ -759,16 +739,16 @@ button:hover .arrow {
 }
 .project-preview {
   border: 1px solid #626a56;
-  padding: 20px;
+  padding: 22px;
   position: relative;
   align-self: start;
   min-height: 396px;
-  background: linear-gradient(130deg, #23281c33, transparent);
+  background: var(--bg-secondary);
 }
 .preview-inner {
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
-  gap: 23px;
+  gap: 26px;
   align-items: center;
   animation: preview-in 0.3s ease-out;
 }
@@ -791,7 +771,7 @@ button:hover .arrow {
   background: #10120fe6;
 }
 .project-artwork {
-  background: radial-gradient(ellipse at 10% 10%, #414a3855, transparent 60%), #11160f;
+  background: #131810;
   border: 1px solid #383e3566;
   display: grid;
   align-items: center;
@@ -816,39 +796,6 @@ button:hover .arrow {
   color: var(--muted);
   letter-spacing: 0.06em;
 }
-.workspace-diagram {
-  margin: 20px 12px;
-  transform: rotate(-5deg);
-  border: 1px solid var(--olive);
-  padding: 14px 10px 30px;
-  background: #1c2219;
-  font-size: 6px;
-}
-.workspace-diagram > div {
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--border);
-}
-.workspace-diagram > div span {
-  float: right;
-  color: var(--moss);
-}
-.workspace-diagram p {
-  display: flex;
-  gap: 8px;
-  padding-top: 12px;
-}
-.workspace-diagram p span {
-  width: 50%;
-  border: 1px solid var(--border);
-  padding: 8px 6px;
-  line-height: 2;
-}
-.workspace-diagram .star {
-  position: absolute;
-  bottom: 7px;
-  right: 10px;
-  width: 14px;
-}
 .project-details {
   min-width: 0;
 }
@@ -857,12 +804,14 @@ button:hover .arrow {
   margin-bottom: 20px;
 }
 .project-details > p {
-  font-size: 10px;
+  font-size: 11px;
   line-height: 1.9;
   margin-bottom: 20px;
 }
 .project-details .tags {
   gap: 6px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
 }
 .project-details .tags li {
   padding: 5px 8px;
@@ -870,7 +819,7 @@ button:hover .arrow {
 }
 .project-type {
   display: block;
-  font-size: 7px;
+  font-size: 8px;
   letter-spacing: 0.09em;
   color: var(--moss);
   margin-bottom: 14px;
@@ -946,11 +895,6 @@ button:hover .arrow {
   .project-details .project-type {
     display: none;
   }
-  .workspace-diagram {
-    max-width: 230px;
-    margin-inline: auto;
-    width: 100%;
-  }
 }
 @media (max-width: 760px) {
   .section-aside {
@@ -1012,11 +956,6 @@ button:hover .arrow {
   .project-artwork,
   .project-image {
     height: 220px;
-  }
-  .workspace-diagram {
-    max-width: 240px;
-    width: 100%;
-    margin-inline: auto;
   }
   .project-details > p {
     font-size: 11px;
@@ -1125,7 +1064,7 @@ button:hover .arrow {
   }
 }
 .contact {
-  padding-block: 64px 72px;
+  padding-block: 80px 84px;
 }
 .contact .section-content {
   max-width: 760px;
@@ -1191,7 +1130,7 @@ button:hover .arrow {
 }
 @media (max-width: 760px) {
   .contact {
-    padding-block: 48px 56px;
+    padding-block: 60px 64px;
   }
   .contact-copy > p {
     font-size: 12px;
@@ -1280,5 +1219,78 @@ button:hover .arrow {
   .project-selector {
     height: 100%;
     min-height: 150px;
+  }
+}
+
+/* Alternate paper-dark surfaces and two quiet diamond joints establish section rhythm. */
+.about,
+.projects,
+.contact {
+  background-color: var(--bg-alternate);
+}
+
+.projects::before,
+.contact::before {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  top: -4px;
+  left: calc(50% - 4px);
+  width: 7px;
+  height: 7px;
+  border: 1px solid var(--moss);
+  background: var(--bg-alternate);
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+
+.hero h1 .hero-sparkle {
+  width: clamp(22px, 2.2vw, 30px);
+  height: clamp(22px, 2.2vw, 30px);
+  flex-shrink: 0;
+  align-self: center;
+  margin-left: 8px;
+  color: var(--ivory);
+  transform: translateY(-0.08em);
+  pointer-events: none;
+}
+
+@media (max-width: 760px) {
+  .tech-stack {
+    padding-block: 46px 50px;
+  }
+
+  .hero h1 .hero-sparkle {
+    margin-left: 3px;
+  }
+}
+
+.project-artwork {
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  gap: 12px;
+  padding: 14px 12px;
+}
+
+.project-artwork .artwork-caption,
+.project-artwork figcaption {
+  position: static;
+  padding: 0;
+}
+
+.project-diagram {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  max-width: 260px;
+  margin-inline: auto;
+  overflow: visible;
+  font-family: var(--mono);
+  pointer-events: none;
+}
+
+@media (max-width: 1100px) and (min-width: 761px) {
+  .project-artwork {
+    padding-inline: 12px;
   }
 }

@@ -6,22 +6,28 @@ interface DottedArtworkProps {
   height: number
   className?: string
   loading?: 'eager' | 'lazy'
+  ink?: string
 }
 
-/** Display the original dotted artwork as decoration, without modifying its source pixels. */
+/** Keep the supplied dot pattern; optional solid ink provides an exact decorative colour. */
 export default function DottedArtwork({
   file,
   width,
   height,
   className = '',
   loading = 'lazy',
+  ink,
 }: DottedArtworkProps) {
   const source = `${import.meta.env.BASE_URL}assets/images/${file}`
-  return (
+  const maskStyle = {
+    '--artwork-source': `url("${source}")`,
+    '--artwork-ink': ink,
+  } as CSSProperties
+  const image = (
     <img
-      className={`dotted-artwork ${className}`}
+      className={ink ? 'dotted-artwork-source' : `dotted-artwork ${className}`}
       src={source}
-      style={{ '--artwork-source': `url("${source}")` } as CSSProperties}
+      style={ink ? undefined : maskStyle}
       width={width}
       height={height}
       alt=""
@@ -30,5 +36,17 @@ export default function DottedArtwork({
       decoding="async"
       draggable={false}
     />
+  )
+
+  return ink ? (
+    <span
+      className={`dotted-artwork dotted-artwork-tinted ${className}`}
+      style={maskStyle}
+      aria-hidden="true"
+    >
+      {image}
+    </span>
+  ) : (
+    image
   )
 }

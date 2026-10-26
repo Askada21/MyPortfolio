@@ -103,7 +103,13 @@ export default function About() {
             </ul>
           </div>
         </div>
-        <DottedArtwork file="dotted-floral.jpg" width={766} height={734} className="about-floral" />
+        <DottedArtwork
+          file="dotted-floral.jpg"
+          width={766}
+          height={734}
+          className="about-floral"
+          ink="var(--ivory)"
+        />
       </div>
     </section>
   )

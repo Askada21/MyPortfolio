@@ -1,6 +1,6 @@
 import { experience } from '../data/experience'
 import { SectionLabel } from './Ornaments'
-import DottedArtwork from './DottedArtwork'
+import SpiderLily from './SpiderLily'
 
 export default function Experience() {
   return (
@@ -22,7 +22,7 @@ export default function Experience() {
             ))}
           </ol>
           <div className="experience-landscape experience-botanical">
-            <DottedArtwork file="dotted-botanical-flowers.jpg" width={736} height={981} />
+            <SpiderLily />
           </div>
         </div>
       </div>

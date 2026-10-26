@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { projects } from '../data/projects'
 import type { Project } from '../data/projects'
 import { Arrow, SectionLabel, Star } from './Ornaments'
+import ProjectDiagram from './ProjectDiagram'
 
 function ProjectArtwork({ project }: { project: Project }) {
   if (project.image)
@@ -23,28 +24,7 @@ function ProjectArtwork({ project }: { project: Project }) {
       aria-label={`Illustrative placeholder for ${project.title}; not a project screenshot`}
     >
       <span className="artwork-caption">CONCEPT STUDY / {project.id}</span>
-      <div className="workspace-diagram">
-        <div>
-          WORKSPACE <span>○ ○ ○</span>
-        </div>
-        <p>
-          <span>Ideas</span>
-          <span>In progress</span>
-        </p>
-        <p>
-          <span>
-            01 / Explore
-            <br />
-            02 / Build
-          </span>
-          <span>
-            03 / Connect
-            <br />
-            04 / Share
-          </span>
-        </p>
-        <Star />
-      </div>
+      <ProjectDiagram artwork={project.artwork} />
       <figcaption>ILLUSTRATIVE PREVIEW · SCREENSHOT TO COME</figcaption>
     </figure>
   )

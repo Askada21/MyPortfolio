@@ -1,4 +1,4 @@
-import { Arrow, Star } from './Ornaments'
+import { Arrow, Sparkle } from './Ornaments'
 import VenusFlytrap from './VenusFlytrap'
 
 export default function Hero() {
@@ -14,7 +14,7 @@ export default function Hero() {
         <h1>
           Hi, I’m <em>Daria</em>
           <span className="heading-period">.</span>
-          <Star />
+          <Sparkle />
         </h1>
         <p className="hero-subtitle">
           SOFTWARE ENGINEER &amp;
