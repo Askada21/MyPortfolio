@@ -9,7 +9,7 @@ export default function ProjectDiagram({ artwork }: { artwork: 'workspace' | 'we
       focusable="false"
     >
       <g transform="rotate(-5 130 110)" stroke="var(--olive)" strokeWidth="0.8">
-        <rect x="12" y="14" width="236" height="192" fill="#1c2219" />
+        <rect x="12" y="14" width="236" height="192" fill="var(--bg-secondary)" />
         <path d="M12 43h236" />
         <text x="24" y="32" fill="var(--muted)" stroke="none" fontSize="7" letterSpacing="1.2">
           {artwork === 'workspace' ? 'WORKSPACE' : 'WEB / INTERFACE'}

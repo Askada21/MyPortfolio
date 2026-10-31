@@ -26,7 +26,7 @@ export default function Introduction({ echo = false }: { echo?: boolean }) {
       <p className="intro-description">
         I build software, work with data, and turn ideas into practical solutions.
       </p>
-      <span className="intro-discipline">Software engineering &amp; data science</span>
+      <span className="intro-discipline">Software Engineer &amp; Data Science Student</span>
     </div>
   )
 }

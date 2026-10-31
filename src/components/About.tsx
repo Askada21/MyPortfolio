@@ -1,3 +1,4 @@
+import CanvaArtwork from './CanvaArtwork'
 import { profile } from '../data/profile'
 import { Branch, SectionLabel, Star } from './Ornaments'
 import DottedArtwork from './DottedArtwork'
@@ -37,6 +38,7 @@ function InfoIcon({ type }: { type: 'location' | 'study' | 'laptop' | 'flower' }
 export default function About() {
   return (
     <section id="about" className="section about">
+      <CanvaArtwork file="PHOTO-2.png" className="section-glow about-glow" />
       <div className="section-content">
         <SectionLabel number="02">About me</SectionLabel>
         <div className="about-layout">

@@ -13,6 +13,7 @@ export function CanvaAssetFilters() {
         >
           <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  -1 -1 -1 0 3" />
           <feColorMatrix type="saturate" values="1.4" />
+          <feComposite in2="SourceGraphic" operator="in" />
         </filter>
       </defs>
     </svg>

@@ -5,6 +5,8 @@ import Introduction, { IntroActions } from './Introduction'
 export default function Hero() {
   return (
     <section id="home" className="hero section" aria-label="Introduction">
+      <CanvaArtwork file="PHOTO-2.png" className="hero-edge-glow hero-edge-left" />
+      <CanvaArtwork file="PHOTO-3.png" className="hero-edge-glow hero-edge-right" />
       <div className="mobile-introduction">
         <Introduction />
         <nav className="intro-navigation" aria-label="Explore the portfolio">

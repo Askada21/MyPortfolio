@@ -1,9 +1,12 @@
+import CanvaArtwork from './CanvaArtwork'
 import { profile } from '../data/profile'
 import { Arrow, SectionLabel, LineStar } from './Ornaments'
 
 export default function Contact() {
   return (
     <section id="contact" className="section contact">
+      <CanvaArtwork file="PHOTO-3.png" className="section-glow contact-glow-right" />
+      <CanvaArtwork file="PHOTO-2.png" className="section-glow contact-glow-left" />
       <div className="section-content">
         <SectionLabel number="06">Contact</SectionLabel>
         <div className="contact-copy">
