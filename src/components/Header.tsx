@@ -1,7 +1,6 @@
+import { portfolioNavigation } from '../data/navigation'
 import { useEffect, useRef, useState } from 'react'
-import { LineStar } from './Ornaments'
-
-const links = ['About', 'Projects', 'Experience', 'Contact']
+import Introduction, { IntroActions } from './Introduction'
 
 export default function Header() {
   const [open, setOpen] = useState(false)
@@ -9,16 +8,16 @@ export default function Header() {
   const toggle = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
-    const sections = ['Home', ...links]
-      .map((link) => document.getElementById(link.toLowerCase()))
+    const sections = ['home', ...portfolioNavigation.map((link) => link.id)]
+      .map((id) => document.getElementById(id))
       .filter((el): el is HTMLElement => !!el)
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) setActive(entry.target.id === 'home' ? '' : entry.target.id)
+          if (entry.isIntersecting) setActive(entry.target.id)
         })
       },
-      { rootMargin: '-20% 0px -45% 0px' },
+      { rootMargin: '-15% 0px -55% 0px' },
     )
     sections.forEach((section) => observer.observe(section))
     const closeOnEscape = (event: KeyboardEvent) => {
@@ -27,7 +26,7 @@ export default function Header() {
         toggle.current?.focus()
       }
     }
-    const wideScreen = window.matchMedia('(min-width: 761px)')
+    const wideScreen = window.matchMedia('(min-width: 1101px)')
     const closeOnResize = () => {
       if (wideScreen.matches) setOpen(false)
     }
@@ -49,8 +48,11 @@ export default function Header() {
           onClick={() => setOpen(false)}
           aria-label="Daria Osypova, home"
         >
-          DARIA OSYPOVA
+          Daria Osypova
         </a>
+        <div className="sidebar-introduction">
+          <Introduction echo />
+        </div>
         <button
           ref={toggle}
           className="menu-toggle"
@@ -65,20 +67,20 @@ export default function Header() {
           className={open ? 'navigation is-open' : 'navigation'}
           aria-label="Main navigation"
         >
-          {links.map((link) => (
+          {portfolioNavigation.map((link) => (
             <a
-              key={link}
-              href={`#${link.toLowerCase()}`}
+              key={link.id}
+              href={`#${link.id}`}
               onClick={() => setOpen(false)}
-              aria-current={active === link.toLowerCase() ? 'location' : undefined}
+              aria-current={active === link.id ? 'location' : undefined}
             >
-              {link}
+              {link.title}
             </a>
           ))}
-          <span className="header-seal" aria-hidden="true">
-            <LineStar />
-          </span>
         </nav>
+        <div className="sidebar-actions">
+          <IntroActions />
+        </div>
       </div>
     </header>
   )

@@ -1,4 +1,5 @@
 import Header from './components/Header'
+import { CanvaAssetFilters } from './components/CanvaArtwork'
 import Hero from './components/Hero'
 import About from './components/About'
 import TechStack from './components/TechStack'
@@ -15,6 +16,7 @@ export default function App() {
       <a className="skip-link" href="#main-content">
         Skip to content
       </a>
+      <CanvaAssetFilters />
       <Header />
       <main id="main-content" tabIndex={-1}>
         <Hero />
