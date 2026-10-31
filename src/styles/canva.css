@@ -525,3 +525,22 @@ main,
     transform: rotate(-28deg);
   }
 }
+
+/* Keep navigation and actions together on wide, shorter laptop displays. */
+@media (min-width: 1101px) and (min-height: 801px) and (max-height: 950px) {
+  .name-composition h1,
+  .name-echo {
+    font-size: clamp(36px, min(3.6vw, 6vh), 68px);
+  }
+  .intro-role,
+  .intro-university,
+  .intro-description {
+    font-size: clamp(14px, min(1.4vw, 2.4vh), 25px);
+  }
+  .navigation {
+    margin-top: 3.5vh;
+  }
+  .navigation a {
+    font-size: clamp(16px, min(1.5vw, 2.6vh), 27px);
+  }
+}
