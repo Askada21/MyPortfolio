@@ -30,9 +30,9 @@ export default function Hero() {
           preserveAspectRatio="none"
           aria-hidden="true"
         >
-          <path className="leader-sql" d="M430 175 600 398" />
-          <path className="leader-python" d="M320 595 548 487" />
-          <path className="leader-pandas" d="M535 704 618 604" />
+          <path className="leader-sql" d="M430 175 600 385" />
+          <path className="leader-python" d="M315 555 548 455" />
+          <path className="leader-pandas" d="M535 660 618 560" />
         </svg>
         <span className="data-label label-sql">[SQL]</span>
         <span className="data-label label-python">[Python]</span>

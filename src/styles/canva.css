@@ -49,9 +49,9 @@ body::before {
   position: relative;
   isolation: isolate;
   display: flex;
-  justify-content: space-around;
-  gap: 24px;
-  padding: 20px 12px 24px;
+  justify-content: flex-start;
+  gap: clamp(35px, 7.4vw, 128px);
+  padding: 20px 0 24px 34px;
 }
 .name-composition h1,
 .name-echo {
@@ -204,7 +204,7 @@ main,
 }
 .data-sculpture {
   position: absolute;
-  width: 58%;
+  width: 53%;
   left: 39%;
   top: 27%;
   filter: url(#canva-remove-paper);
