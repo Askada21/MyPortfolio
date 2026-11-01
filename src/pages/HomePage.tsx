@@ -1,4 +1,5 @@
 import ActionLink from '../components/ActionLink'
+import DataSculpture from '../components/DataSculpture'
 import Navigation from '../components/Navigation'
 import { pageHref } from '../data/navigation'
 import '../styles/home.css'
@@ -34,7 +35,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <div className="home-art" aria-hidden="true" />
+      <div className="home-art">
+        <DataSculpture />
+      </div>
     </main>
   )
 }
