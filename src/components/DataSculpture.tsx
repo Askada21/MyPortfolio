@@ -31,13 +31,13 @@ export default function DataSculpture() {
         </g>
 
         <g className="sculpture-labels" fill="#fff">
-          <text x="421" y="169">
+          <text x="458" y="169" textAnchor="middle">
             [SQL]
           </text>
-          <text x="200" y="617">
+          <text x="315" y="617" textAnchor="end">
             [Python]
           </text>
-          <text x="488" y="766">
+          <text x="550" y="766" textAnchor="middle">
             [Pandas]
           </text>
         </g>

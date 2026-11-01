@@ -40,7 +40,7 @@
   font-family: 'Anton', sans-serif;
   font-size: clamp(3.25rem, 3.6vw, 4rem);
   font-weight: 400;
-  line-height: 1.43;
+  line-height: 1.35;
   letter-spacing: -0.025em;
 }
 
@@ -59,7 +59,7 @@
 }
 
 .home-copy p + p {
-  margin-top: 1.25rem;
+  margin-top: 1rem;
 }
 
 .home-role {
@@ -101,7 +101,7 @@
   width: min(100%, 31.5rem);
   margin-top: auto;
   margin-left: -0.625rem;
-  padding-top: clamp(2.75rem, 8.5svh, 5.25rem);
+  padding-top: clamp(2rem, 6svh, 4rem);
 }
 
 .action-link {
@@ -200,4 +200,156 @@
   min-height: 3.25rem;
   margin-top: 1rem;
   font-size: 1rem;
+}
+
+@media (max-width: 1200px) and (min-width: 761px) {
+  .home-page {
+    grid-template-columns: 46% minmax(0, 1fr);
+  }
+
+  .home-heading {
+    padding-inline: 0.5rem;
+  }
+
+  .home-copy {
+    font-size: 1rem;
+    line-height: 1.45;
+  }
+
+  .home-actions {
+    gap: 1rem;
+    margin-left: 0;
+  }
+
+  .sculpture-labels {
+    font-size: 34px;
+  }
+}
+
+@media (min-width: 761px) and (max-height: 850px) {
+  .home-intro {
+    padding-block: clamp(1.5rem, 5.5svh, 3rem);
+  }
+
+  .home-heading {
+    margin-bottom: 1.5rem;
+  }
+
+  .home-heading h1 {
+    font-size: clamp(2.75rem, 3.5vw, 3.5rem);
+    line-height: 1.25;
+  }
+
+  .home-copy p + p {
+    margin-top: 0.875rem;
+  }
+
+  .home-navigation {
+    gap: 0.25rem;
+    margin-top: clamp(1.5rem, 5svh, 2.5rem);
+  }
+
+  .home-actions {
+    padding-top: clamp(1.5rem, 5svh, 2.5rem);
+  }
+}
+
+@media (max-width: 760px) {
+  .home-page {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .home-intro {
+    padding: clamp(2rem, 7vw, 3.5rem);
+    padding-top: clamp(2.75rem, 9vw, 4.5rem);
+  }
+
+  .home-intro::before {
+    background:
+      radial-gradient(ellipse 34% 17% at 17% 17%, #bc50d961, transparent 100%),
+      radial-gradient(ellipse 44% 20% at 56% 15%, #ffc3ae80, transparent 100%),
+      radial-gradient(ellipse 35% 16% at 20% 100%, #ff92ae70, transparent 100%),
+      radial-gradient(ellipse 35% 18% at 85% 100%, #d167cf59, transparent 100%);
+  }
+
+  .home-heading {
+    margin-bottom: 2rem;
+    padding: 0;
+  }
+
+  .home-heading h1 {
+    font-size: clamp(3.5rem, 12vw, 5.5rem);
+    line-height: 1.2;
+  }
+
+  .home-copy {
+    font-size: clamp(0.9375rem, 3.6vw, 1.125rem);
+    line-height: 1.5;
+  }
+
+  .home-description {
+    max-width: 33ch;
+  }
+
+  .home-navigation {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem 1.5rem;
+    width: min(100%, 24rem);
+    margin-top: 2rem;
+    font-size: 1.0625rem;
+  }
+
+  .home-navigation a {
+    min-height: 2.75rem;
+  }
+
+  .home-actions {
+    gap: 1rem;
+    width: min(100%, 26rem);
+    margin: 0;
+    padding-top: 2rem;
+  }
+
+  .home-actions .action-link {
+    min-width: 0;
+    min-height: 3.5rem;
+    padding-inline: 0.75rem;
+    border-radius: 0.875rem;
+    font-size: 0.9375rem;
+  }
+
+  .home-art {
+    width: 100%;
+    min-height: 21rem;
+    aspect-ratio: 1.12;
+  }
+
+  .data-sculpture {
+    overflow: hidden;
+  }
+
+  .data-sculpture svg {
+    width: 112%;
+    max-height: 100%;
+  }
+
+  .sculpture-labels {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 360px) {
+  .home-intro {
+    padding-inline: 1.5rem;
+  }
+
+  .home-actions {
+    gap: 0.75rem;
+  }
+
+  .home-actions .action-link {
+    padding-inline: 0.5rem;
+    font-size: 0.875rem;
+  }
 }
