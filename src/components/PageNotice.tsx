@@ -6,8 +6,17 @@ export default function PageNotice({ title }: { title: string }) {
 
   useEffect(() => {
     const dialog = dialogRef.current
+    const previousFocus = document.activeElement
+    const returnTarget =
+      previousFocus instanceof HTMLElement && previousFocus !== document.body
+        ? previousFocus
+        : document.getElementById('main-content')
+
     dialog?.showModal()
-    return () => dialog?.close()
+    return () => {
+      dialog?.close()
+      returnTarget?.focus({ preventScroll: true })
+    }
   }, [])
 
   return (

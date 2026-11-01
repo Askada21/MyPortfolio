@@ -29,7 +29,12 @@ export default function HomePage() {
           <ActionLink href={pageHref('/projects')} aria-label="View Projects (coming soon)">
             View Projects
           </ActionLink>
-          <ActionLink href="https://github.com/Askada21" target="_blank" rel="noopener noreferrer">
+          <ActionLink
+            href="https://github.com/Askada21"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub (opens in a new tab)"
+          >
             GitHub
           </ActionLink>
         </div>

@@ -1,5 +1,7 @@
 # Canva design implementation
 
+> Historical notes for the implementation preserved by checkpoint `5134242`. The current home-only rebuild is documented in [HOME-PAGE.md](HOME-PAGE.md).
+
 The primary references are `public/assets/images/main.png` (1740 × 982) and `public/assets/images/second.png` (2114 × 1190). They are references only, never rendered as a complete page image.
 
 ## Layout and typography
